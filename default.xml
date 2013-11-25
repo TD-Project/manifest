@@ -6,6 +6,9 @@
 
   <remote  name="du"
            fetch="https://github.com/TD-Project" />
+           
+  <remote  name="github"
+           fetch="https://github.com/" />
           
   <default revision="refs/tags/android-4.4_r1.2"
            remote="aosp"
@@ -15,15 +18,18 @@
 
   <!--AOSP repos-->
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
+  <project path="art" name="platform/art" />
   <project path="bionic" name="platform/bionic" groups="pdk" />
   <project path="bootable/bootloader/legacy" name="platform/bootable/bootloader/legacy" />
   <project path="bootable/diskinstaller" name="platform/bootable/diskinstaller" />
   <project path="bootable/recovery" name="platform/bootable/recovery" groups="pdk" />
   <project path="cts" name="platform/cts" groups="cts" />
+  <project path="dalvik" name="platform/dalvik" />
   <project path="developers/build" name="platform/developers/build" />
   <project path="developers/demos" name="platform/developers/demos" />
   <project path="developers/docs" name="platform/developers/docs" />
   <project path="developers/samples/android" name="platform/developers/samples/android" />
+  <project path="development" name="platform/development" />
   <project path="device/asus/deb" name="device/asus/deb" groups="device,flo" />
   <project path="device/asus/flo" name="device/asus/flo" groups="device,flo" />
   <project path="device/asus/flo-kernel" name="device/asus/flo-kernel" groups="device,flo" />
@@ -239,12 +245,15 @@
   <project path="external/yaffs2" name="platform/external/yaffs2" groups="pdk" />
   <project path="external/zlib" name="platform/external/zlib" groups="pdk" />
   <project path="external/zxing" name="platform/external/zxing" />
+  <project path="frameworks/av" name="platform/frameworks/av" groups="pdk" />
+  <project path="frameworks/base" name="platform/frameworks/base" />
   <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" />
   <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" />
   <project path="frameworks/compile/slang" name="platform/frameworks/compile/slang" groups="pdk" />
   <project path="frameworks/ex" name="platform/frameworks/ex" />
   <project path="frameworks/mff" name="platform/frameworks/mff" />
   <project path="frameworks/ml" name="platform/frameworks/ml" />
+  <project path="frameworks/native" name="platform/frameworks/native" groups="pdk" />
   <project path="frameworks/opt/calendar" name="platform/frameworks/opt/calendar" />
   <project path="frameworks/opt/carddav" name="platform/frameworks/opt/carddav" />
   <project path="frameworks/opt/colorpicker" name="platform/frameworks/opt/colorpicker" />
@@ -256,6 +265,7 @@
   <project path="frameworks/opt/net/voip" name="platform/frameworks/opt/net/voip" />
   <project path="frameworks/opt/photoviewer" name="platform/frameworks/opt/photoviewer" />
   <project path="frameworks/opt/timezonepicker" name="platform/frameworks/opt/timezonepicker" />
+  <project path="frameworks/opt/telephony" name="platform/frameworks/opt/telephony" groups="pdk" />
   <project path="frameworks/opt/vcard" name="platform/frameworks/opt/vcard" />
   <project path="frameworks/rs" name="platform/frameworks/rs" groups="pdk" />
   <project path="frameworks/support" name="platform/frameworks/support" />
@@ -265,12 +275,20 @@
   <project path="frameworks/webview" name="platform/frameworks/webview" />
   <project path="frameworks/wilhelm" name="platform/frameworks/wilhelm" />
   <project path="hardware/akm" name="platform/hardware/akm" />
+  <project path="hardware/broadcom/libbt" name="platform/hardware/broadcom/libbt" groups="pdk" />
   <project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan" groups="broadcom_wlan" />
   <project path="hardware/invensense" name="platform/hardware/invensense" groups="invensense" />
+  <project path="hardware/libhardware" name="platform/hardware/libhardware" groups="pdk" />
+  <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy" groups="pdk" />
+  <project path="hardware/qcom/audio" name="platform/hardware/qcom/audio" groups="qcom" />
   <project path="hardware/qcom/bt" name="platform/hardware/qcom/bt" groups="qcom" />
   <project path="hardware/qcom/camera" name="platform/hardware/qcom/camera" groups="qcom" />
+  <project path="hardware/qcom/display" name="platform/hardware/qcom/display" groups="qcom" />
+  <project path="hardware/qcom/keymaster" name="platform/hardware/qcom/keymaster" groups="qcom" />
+  <project path="hardware/qcom/media" name="platform/hardware/qcom/media" groups="qcom" />
   <project path="hardware/qcom/msm8960" name="platform/hardware/qcom/msm8960" groups="qcom_msm8960" />
   <project path="hardware/qcom/msm8x74" name="platform/hardware/qcom/msm8x74" groups="qcom_msm8x74" />
+  <project path="hardware/qcom/power" name="platform/hardware/qcom/power" groups="qcom" />
   <project path="hardware/qcom/sensors" name="platform/hardware/qcom/sensors" groups="qcom" />
   <project path="hardware/qcom/wlan" name="platform/hardware/qcom/wlan" groups="qcom_wlan" />
   <project path="hardware/ril" name="platform/hardware/ril" groups="pdk" />
@@ -284,18 +302,23 @@
   <project path="ndk" name="platform/ndk" />
   <project path="packages/apps/BasicSmsReceiver" name="platform/packages/apps/BasicSmsReceiver" />
   <project path="packages/apps/Bluetooth" name="platform/packages/apps/Bluetooth" />
+  <project path="packages/apps/Browser" name="platform/packages/apps/Browser" />
   <project path="packages/apps/Calculator" name="platform/packages/apps/Calculator" />
   <project path="packages/apps/Calendar" name="platform/packages/apps/Calendar" />
   <project path="packages/apps/Camera" name="platform/packages/apps/Camera" />
   <project path="packages/apps/Camera2" name="platform/packages/apps/Camera2" />
   <project path="packages/apps/CellBroadcastReceiver" name="platform/packages/apps/CellBroadcastReceiver" />
   <project path="packages/apps/CertInstaller" name="platform/packages/apps/CertInstaller" />
+  <project path="packages/apps/Contacts" name="platform/packages/apps/Contacts" />
+  <project path="packages/apps/ContactsCommon" name="platform/packages/apps/ContactsCommon" />
   <project path="packages/apps/DeskClock" name="platform/packages/apps/DeskClock" />
+  <project path="packages/apps/Dialer" name="platform/packages/apps/Dialer" />
   <project path="packages/apps/Email" name="platform/packages/apps/Email" />
   <project path="packages/apps/Exchange" name="platform/packages/apps/Exchange" />
   <project path="packages/apps/Gallery" name="platform/packages/apps/Gallery" />
   <project path="packages/apps/Gallery2" name="platform/packages/apps/Gallery2" />
   <project path="packages/apps/HTMLViewer" name="platform/packages/apps/HTMLViewer" />
+  <project path="packages/apps/InCallUI" name="platform/packages/apps/InCallUI" />
   <project path="packages/apps/KeyChain" name="platform/packages/apps/KeyChain" />
   <project path="packages/apps/Launcher2" name="platform/packages/apps/Launcher2" />
   <project path="packages/apps/Launcher3" name="platform/packages/apps/Launcher3" />
@@ -310,6 +333,8 @@
   <project path="packages/apps/PhoneCommon" name="platform/packages/apps/PhoneCommon" />
   <project path="packages/apps/Protips" name="platform/packages/apps/Protips" />
   <project path="packages/apps/Provision" name="platform/packages/apps/Provision" />
+  <project path="packages/apps/QuickSearchBox" name="platform/packages/apps/QuickSearchBox" />
+  <project path="packages/apps/Settings" name="platform/packages/apps/Settings" />
   <project path="packages/apps/SmartCardService" name="platform/packages/apps/SmartCardService" />
   <project path="packages/apps/SpareParts" name="platform/packages/apps/SpareParts" />
   <project path="packages/apps/SpeechRecorder" name="platform/packages/apps/SpeechRecorder" />
@@ -326,11 +351,14 @@
   <project path="packages/providers/CalendarProvider" name="platform/packages/providers/CalendarProvider" />
   <project path="packages/providers/ContactsProvider" name="platform/packages/providers/ContactsProvider" />
   <project path="packages/providers/DownloadProvider" name="platform/packages/providers/DownloadProvider" />
+  <project path="packages/providers/MediaProvider" name="platform/packages/providers/MediaProvider" />
   <project path="packages/providers/PartnerBookmarksProvider" name="platform/packages/providers/PartnerBookmarksProvider" />
+  <project path="packages/providers/TelephonyProvider" name="platform/packages/providers/TelephonyProvider" />
   <project path="packages/providers/UserDictionaryProvider" name="platform/packages/providers/UserDictionaryProvider" />
   <project path="packages/screensavers/Basic" name="platform/packages/screensavers/Basic" />
   <project path="packages/screensavers/PhotoTable" name="platform/packages/screensavers/PhotoTable" />
   <project path="packages/screensavers/WebView" name="platform/packages/screensavers/WebView" />
+  <project path="packages/services/Telephony" name="platform/packages/services/Telephony" />
   <project path="packages/wallpapers/Basic" name="platform/packages/wallpapers/Basic" />
   <project path="packages/wallpapers/Galaxy4" name="platform/packages/wallpapers/Galaxy4" />
   <project path="packages/wallpapers/HoloSpiral" name="platform/packages/wallpapers/HoloSpiral" />
@@ -387,6 +415,8 @@
   <project path="prebuilts/sdk" name="platform/prebuilts/sdk" groups="pdk" />
   <project path="prebuilts/tools" name="platform/prebuilts/tools" groups="pdk,tools" />
   <project path="sdk" name="platform/sdk" />
+  <project path="system/core" name="platform/system/core" groups="pdk" />
+  <project path="system/extras" name="platform/system/extras" groups="pdk" />
   <project path="system/media" name="platform/system/media" groups="pdk" />
   <project path="system/netd" name="platform/system/netd" groups="pdk" />
   <project path="system/security" name="platform/system/security" groups="pdk" />
@@ -409,72 +439,25 @@
   <project path="build" name="build" remote="du" revision="du44" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
-  <project path="art" name="art" remote="du" revision="du44" />
-  <project path="dalvik" name="dalvik" remote="du" revision="du44" />
-  <project path="development" name="development" remote="du" revision="du44" />
-  <project path="external/busybox" name="external_busybox" remote="du" revision="du44" />
-  <project path="external/koush/Superuser" name="external_koush_Superuser" remote="du" revision="du44" />
-  <project path="external/koush/Widgets" name="external_koush_Widgets" remote="du" revision="du44" />
-  <project path="system/core" name="system_core" remote="du" revision="du44" />
-  <project path="system/extras" name="system_extras" remote="du" revision="du44" />
   <project path="manifest" name="manifest" remote="du" revision="du44" />
-
-  <!--Device and Common-->
-  <project path="device/htc/m7tmo" name="device_htc_m7tmo" remote="du" revision="du44" />
-  <project path="device/htc/m7-common" name="device_htc_m7-common" remote="du" revision="du44" />
-
-  <!--Frameworks-->
-  <project path="frameworks/av" name="frameworks_av" remote="du" revision="du44" />
-  <project path="frameworks/base" name="frameworks_base" remote="du" revision="du44" />
-  <project path="frameworks/native" name="frameworks_native" remote="du" revision="du44" />
-  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" remote="du" revision="du44" />
-
-  <!--Hardware-->
-  <project path="hardware/broadcom/libbt" name="hardware_broadcom_libbt" remote="du" revision="du44" />
-  <project path="hardware/libhardware" name="hardware_libhardware" remote="du" revision="du44" />
-  <project path="hardware/libhardware_legacy" name="hardware_libhardware_legacy" remote="du" revision="du44" />
-  <project path="hardware/qcom/audio" name="hardware_qcom_audio" remote="du" revision="du44" />
-  <project path="hardware/qcom/audio-caf" name="hardware_qcom_audio-caf" remote="du" revision="du44" />
-  <project path="hardware/qcom/display" name="hardware_qcom_display" remote="du" revision="du44" />
-  <project path="hardware/qcom/display-caf" name="hardware_qcom_display-caf" remote="du" revision="du44" />
-  <project path="hardware/qcom/keymaster" name="hardware_qcom_keymaster" remote="du" revision="du44" />
-  <project path="hardware/qcom/media" name="hardware_qcom_media" remote="du" revision="du44" />
-  <project path="hardware/qcom/media-caf" name="hardware_qcom_media-caf" remote="du" revision="du44" />
-  <project path="hardware/qcom/power" name="hardware_qcom_power" remote="du" revision="du44" />
-  <project path="hardware/ril" name="hardware_ril" remote="du" revision="du44" />
-
-  <!--Kernels-->
-  <project path="kernel/htc/m7" name="kernel_htc_m7" remote="du" revision="du44" />
 
   <!--Packages-->
   <project path="packages/apps/About" name="packages_apps_About" remote="du" revision="du44" />
   <project path="packages/apps/Apollo" name="packages_apps_Apollo" remote="du" revision="du44" />
-  <project path="packages/apps/Browser" name="packages_apps_Browser" remote="du" revision="du44" />
-  <project path="packages/apps/Contacts" name="packages_apps_Contacts" remote="du" revision="du44" />
-  <project path="packages/apps/ContactsCommon" name="packages_apps_ContactsCommon" remote="du" revision="du44" />
   <project path="packages/apps/DashClock" name="packages_apps_DashClock" remote="du" revision="du44" />
-  <project path="packages/apps/Dialer" name="packages_apps_Dialer" remote="du" revision="du44" />
   <project path="packages/apps/DU-Changelog" name="packages_apps_DU-Changelog" remote="du" revision="du44" />
   <project path="packages/apps/DU-Stats" name="packages_apps_DU-Stats" remote="du" revision="du44" />
   <project path="packages/apps/DU-Updater" name="packages_apps_DU-Updater" remote="du" revision="du44" />
   <project path="packages/apps/DU-Walls" name="packages_apps_DU-Walls" remote="du" revision="du44" />
   <project path="packages/apps/EVWidgets" name="packages_apps_EVWidgets" remote="du" revision="du44" />
   <project path="packages/apps/HostsFileManager" name="packages_apps_HostsFileManager" remote="du" revision="du44" />
-  <project path="packages/apps/InCallUI" name="packages_apps_InCallUI" remote="du" revision="du44" />
   <project path="packages/apps/LockClock" name="packages_apps_LockClock" remote="du" revision="du44" />
   <project path="packages/apps/PerformanceControl" name="packages_apps_PerformanceControl" remote="du" revision="du44" />
-  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="du" revision="du44" />
   <project path="packages/apps/SoundRecorder" name="packages_apps_SoundRecorder" remote="du" revision="du44" />
   <project path="packages/apps/Torch" name="packages_apps_Torch" remote="du" revision="du44" />
-  <project path="packages/providers/MediaProvider" name="packages_providers_MediaProvider" remote="du" revision="du44" />
-  <project path="packages/providers/TelephonyProvider" name="packages_providers_TelephonyProvider" remote="du" revision="du44" />
-  <project path="packages/services/Telephony" name="packages_services_Telephony" remote="du" revision="du44" />
   <project path="packages/wallpapers/PhaseBeam" name="packages_wallpapers_PhaseBeam" remote="du" revision="du44" />
 
   <!--Vendors-->
   <project path="vendor/htc" name="vendor_htc" remote="du" revision="du44" />
   <project path="vendor/du" name="vendor_du" remote="du" revision="du44" />
-  <project path="vendor/tmobile/apps/ThemeChooser" name="themes-platform-vendor-tmobile-apps-ThemeChooser" remote="du" revision="du44" />
-  <project path="vendor/tmobile/libs/com.tmobile.themes" name="vendor_tmobile_libs_com.tmobile.themes" remote="du" revision="du44" />
-  <project path="vendor/tmobile/providers/ThemeManager" name="vendor_tmobile_providers_ThemeManager" remote="du" revision="du44" />
 </manifest>
