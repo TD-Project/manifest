@@ -249,15 +249,12 @@
   <project path="external/yaffs2" name="platform/external/yaffs2" groups="pdk" />
   <project path="external/zlib" name="platform/external/zlib" groups="pdk" />
   <project path="external/zxing" name="platform/external/zxing" />
-  <project path="frameworks/av" name="platform/frameworks/av" groups="pdk" />
-  <project path="frameworks/base" name="platform/frameworks/base" />
   <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" />
   <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" />
   <project path="frameworks/compile/slang" name="platform/frameworks/compile/slang" groups="pdk" />
   <project path="frameworks/ex" name="platform/frameworks/ex" />
   <project path="frameworks/mff" name="platform/frameworks/mff" />
   <project path="frameworks/ml" name="platform/frameworks/ml" />
-  <project path="frameworks/native" name="platform/frameworks/native" groups="pdk" />
   <project path="frameworks/opt/calendar" name="platform/frameworks/opt/calendar" />
   <project path="frameworks/opt/carddav" name="platform/frameworks/opt/carddav" />
   <project path="frameworks/opt/colorpicker" name="platform/frameworks/opt/colorpicker" />
@@ -269,7 +266,6 @@
   <project path="frameworks/opt/net/voip" name="platform/frameworks/opt/net/voip" />
   <project path="frameworks/opt/photoviewer" name="platform/frameworks/opt/photoviewer" />
   <project path="frameworks/opt/timezonepicker" name="platform/frameworks/opt/timezonepicker" />
-  <project path="frameworks/opt/telephony" name="platform/frameworks/opt/telephony" groups="pdk" />
   <project path="frameworks/opt/vcard" name="platform/frameworks/opt/vcard" />
   <project path="frameworks/rs" name="platform/frameworks/rs" groups="pdk" />
   <project path="frameworks/support" name="platform/frameworks/support" />
@@ -282,9 +278,6 @@
   <project path="hardware/broadcom/libbt" name="platform/hardware/broadcom/libbt" groups="pdk" />
   <project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan" groups="broadcom_wlan" />
   <project path="hardware/invensense" name="platform/hardware/invensense" groups="invensense" />
-  <project path="hardware/libhardware" name="platform/hardware/libhardware" groups="pdk" />
-  <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy" groups="pdk" />
-  <project path="hardware/qcom/audio" name="platform/hardware/qcom/audio" groups="qcom" />
   <project path="hardware/qcom/bt" name="platform/hardware/qcom/bt" groups="qcom" />
   <project path="hardware/qcom/camera" name="platform/hardware/qcom/camera" groups="qcom" />
   <project path="hardware/qcom/display" name="platform/hardware/qcom/display" groups="qcom" />
@@ -420,8 +413,6 @@
   <project path="prebuilts/sdk" name="platform/prebuilts/sdk" groups="pdk" />
   <project path="prebuilts/tools" name="platform/prebuilts/tools" groups="pdk,tools" />
   <project path="sdk" name="platform/sdk" />
-  <project path="system/core" name="platform/system/core" groups="pdk" />
-  <project path="system/extras" name="platform/system/extras" groups="pdk" />
   <project path="system/media" name="platform/system/media" groups="pdk" />
   <project path="system/netd" name="platform/system/netd" groups="pdk" />
   <project path="system/security" name="platform/system/security" groups="pdk" />
@@ -439,12 +430,24 @@
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
 
   <!--DU repos-->
+  <project path="system/extras" name="TD-Projects/system/extras" remote="du" revision="du44" groups="pdk" />
+  <project path="frameworks/base" name="TD-Projects/frameworks/base" remote="du" revision="du44" />
+  <project path="frameworks/av" name="TD-Project/frameworks/av" remote="du" revision="du44" groups="pdk" />
+  <project path="frameworks/opt/telephony" name="TD-Project/frameworks/opt/telephony" remote="du" revision="du44" groups="pdk" />
+  <project path="system/core" name="TD-Project/system/core" remote="du" revision="du44" groups="pdk" />
+  <project path="hardware/libhardware" name="TD-Project/hardware/libhardware" remote="du" revision="du44" groups="pdk" />
+  <project path="hardware/libhardware_legacy" name="TD-Project/hardware/libhardware_legacy" remote="du" revision="du44" groups="pdk" />
+  <project path="frameworks/native" name="TD-Project/frameworks/native" remote="du" revision="du44" groups="pdk" />
+   <project path="hardware/qcom/display-caf" name="TD-Project/hardware/qcom/display-caf" remote="du" revision="du44" />
+   <project path="hardware/qcom/audio-caf" name="TD-Project/hardware/qcom/audio-caf" remote="du" revision="du44" />
+   <project path="hardware/qcom/audio" name="TD-Project/hardware/qcom/audio" remote="du" revision="du44" />
+    
 
   <!--Misc-->
-  <project path="build" name="build" remote="du" revision="du44" >
+  <project path="build" name="build" remote="TD-Project" revision="du44" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
-  <project path="manifest" name="manifest" remote="du" revision="du44" />
+  <project path="manifest" name="manifest" remote="TD-Project" revision="du44" />
 
   <!--Packages-->
   <project path="packages/apps/About" name="packages_apps_About" remote="du" revision="du44" />
