@@ -5,7 +5,7 @@
            fetch="https://android.googlesource.com" />
 
   <remote  name="du"
-           fetch="https://github.com/TD-Project" />
+           fetch="https://github.com/TD-Project/" />
            
   <remote  name="github"
            fetch="https://github.com/" />
@@ -430,24 +430,28 @@
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
 
   <!--DU repos-->
-  <project path="system/extras" name="TD-Projects/system/extras" remote="du" revision="du44" groups="pdk" />
-  <project path="frameworks/base" name="TD-Projects/frameworks/base" remote="du" revision="du44" />
-  <project path="frameworks/av" name="TD-Project/frameworks/av" remote="du" revision="du44" groups="pdk" />
-  <project path="frameworks/opt/telephony" name="TD-Project/frameworks/opt/telephony" remote="du" revision="du44" groups="pdk" />
-  <project path="system/core" name="TD-Project/system/core" remote="du" revision="du44" groups="pdk" />
-  <project path="hardware/libhardware" name="TD-Project/hardware/libhardware" remote="du" revision="du44" groups="pdk" />
-  <project path="hardware/libhardware_legacy" name="TD-Project/hardware/libhardware_legacy" remote="du" revision="du44" groups="pdk" />
-  <project path="frameworks/native" name="TD-Project/frameworks/native" remote="du" revision="du44" groups="pdk" />
-   <project path="hardware/qcom/display-caf" name="TD-Project/hardware/qcom/display-caf" remote="du" revision="du44" />
-   <project path="hardware/qcom/audio-caf" name="TD-Project/hardware/qcom/audio-caf" remote="du" revision="du44" />
-   <project path="hardware/qcom/audio" name="TD-Project/hardware/qcom/audio" remote="du" revision="du44" />
+
+  <!--frameworks-->
+  <project path="frameworks/base" name="frameworks/base" remote="du" revision="du44" />
+  <project path="frameworks/av" name="frameworks/av" remote="du" revision="du44" groups="pdk" />
+  <project path="frameworks/opt/telephony" name="frameworks/opt/telephony" remote="du" revision="du44" groups="pdk" />
+  <project path="frameworks/native" name="frameworks/native" remote="du" revision="du44" groups="pdk" />
+
+  <!--hardware-->
+  <project path="hardware/libhardware" name="hardware/libhardware" remote="du" revision="du44" groups="pdk" />
+  <project path="hardware/libhardware_legacy" name="hardware/libhardware_legacy" remote="du" revision="du44" groups="pdk" />
+  <project path="hardware/qcom/display-caf" name="hardware/qcom/display-caf" remote="du" revision="du44" />
+  <project path="hardware/qcom/audio-caf" name="hardware/qcom/audio-caf" remote="du" revision="du44" />
+  <project path="hardware/qcom/audio" name="hardware/qcom/audio" remote="du" revision="du44" />
     
 
   <!--Misc-->
-  <project path="build" name="build" remote="TD-Project" revision="du44" >
+  <project path="build" name="build" remote="du" revision="du44" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
-  <project path="manifest" name="manifest" remote="TD-Project" revision="du44" />
+  <project path="manifest" name="manifest" remote="du" revision="du44" />
+  <project path="system/extras" name="system/extras" remote="du" revision="du44" groups="pdk" />
+  <project path="system/core" name="system/core" remote="du" revision="du44" groups="pdk" />
 
   <!--Packages-->
   <project path="packages/apps/About" name="packages_apps_About" remote="du" revision="du44" />
@@ -468,4 +472,5 @@
   <!--Vendors-->
   <project path="vendor/htc" name="vendor_htc" remote="du" revision="du44" />
   <project path="vendor/du" name="vendor_du" remote="du" revision="du44" />
+  
 </manifest>
