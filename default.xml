@@ -433,7 +433,6 @@
   <project path="device/samsung/qcom-common" name="device_samsung_qcom-common" remote="du" revision="du44" />
   <project path="device/samsung/t769" name="android_device_samsung_t769" remote="du" revision="du44" />
   <project path="device/samsung/exhilarate" name="android_device_samsung_exhilarate" remote="du" revision="du44" />
-  <project path="device/htc/m7" name="device_htc_m7" remote="du" revision="du44" />
   <project path="device/htc/m7-common" name="device_htc_m7-common" remote="du" revision="du44" />
   <project path="device/htc/m7tmo" name="device_htc_m7tmo" remote="du" revision="du44" />
  
