@@ -435,7 +435,12 @@
   <project path="device/samsung/exhilarate" name="android_device_samsung_exhilarate" remote="du" revision="du44" />
   <project path="device/htc/m7-common" name="device_htc_m7-common" remote="du" revision="du44" />
   <project path="device/htc/m7tmo" name="device_htc_m7tmo" remote="du" revision="du44" />
- 
+  <project path="device/samsung/l900" name="device_samsung_l900" remote="du" revision="du44" />
+  <project path="device/samsung/i605" name="device_samsung_i605" remote="du" revision="du44" />
+  <project path="device/samsung/t0lte" name="device_samsung_t0lte" remote="du" revision="du44" />
+  <project path="device/samsung/smdk4412-qcom-common" name="device_samsung_smdk4412-qcom-common" remote="du" revision="du44" />
+  <project path="device/samsung/smdk4412-common" name="device_samsung_smdk4412-common" remote="du" revision="du44" />
+  
 
   <!--frameworks-->
   <project path="frameworks/base" name="frameworks_base" remote="du" revision="du44" />
@@ -449,6 +454,7 @@
   <project path="hardware/qcom/display-caf" name="hardware_qcom_display-caf" remote="du" revision="du44" />
   <project path="hardware/qcom/audio-caf" name="hardware_qcom_audio-caf" remote="du" revision="du44" />
   <project path="hardware/qcom/audio" name="hardware_qcom_audio" remote="du" revision="du44" />
+  <project path="hardware/samsung" name="android_hardware_samsung" remote="du" revision="du44" />
     
 
   <!--Misc-->
@@ -458,7 +464,7 @@
   <project path="manifest" name="manifest" remote="du" revision="du44" />
   <project path="system/extras" name="system_extras" remote="du" revision="du44" groups="pdk" />
   <project path="system/core" name="system_core" remote="du" revision="du44" groups="pdk" />
-  <project path="system/core" name="android_system_qcom" remote="du" revision="du44" groups="pdk" />
+  <project path="system/qcom" name="android_system_qcom" remote="du" revision="du44" groups="pdk" />
   <project path="external/koush/Superuser" name="external_koush_Superuser" remote="du" revision="du44" />
   <project path="external/koush/Widgets" name="external_koush_Widgets" remote="du" revision="du44" />
 
@@ -486,5 +492,6 @@
   <!--Kernels-->
   <project path="kernel/htc/m7" name="kernel_htc_m7" remote="du" revision="du44" /> 
   <project path="kernel/samsung/msm8660-common" name="android_kernel_samsung_msm8660-common" remote="du" revision="du44" /> 
+  <project path="kernel/samsung/smdk4412" name="android_kernel_samsung_smdk4412" remote="du" revision="du44" /> 
 
 </manifest>
