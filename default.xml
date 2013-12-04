@@ -16,7 +16,9 @@
            sync-f="true"
            sync-j="8" />
 
-  <!--AOSP repos-->
+  <project path="build" name="platform/build" groups="pdk" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+  </project>
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
   <project path="art" name="platform/art" />
   <project path="bionic" name="platform/bionic" groups="pdk" />
@@ -245,12 +247,15 @@
   <project path="external/yaffs2" name="platform/external/yaffs2" groups="pdk" />
   <project path="external/zlib" name="platform/external/zlib" groups="pdk" />
   <project path="external/zxing" name="platform/external/zxing" />
+  <project path="frameworks/av" name="platform/frameworks/av" groups="pdk" />
+  <project path="frameworks/base" name="platform/frameworks/base" />
   <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" />
   <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" />
   <project path="frameworks/compile/slang" name="platform/frameworks/compile/slang" groups="pdk" />
   <project path="frameworks/ex" name="platform/frameworks/ex" />
   <project path="frameworks/mff" name="platform/frameworks/mff" />
   <project path="frameworks/ml" name="platform/frameworks/ml" />
+  <project path="frameworks/native" name="platform/frameworks/native" groups="pdk" />
   <project path="frameworks/opt/calendar" name="platform/frameworks/opt/calendar" />
   <project path="frameworks/opt/carddav" name="platform/frameworks/opt/carddav" />
   <project path="frameworks/opt/colorpicker" name="platform/frameworks/opt/colorpicker" />
@@ -262,6 +267,7 @@
   <project path="frameworks/opt/net/voip" name="platform/frameworks/opt/net/voip" />
   <project path="frameworks/opt/photoviewer" name="platform/frameworks/opt/photoviewer" />
   <project path="frameworks/opt/timezonepicker" name="platform/frameworks/opt/timezonepicker" />
+  <project path="frameworks/opt/telephony" name="platform/frameworks/opt/telephony" groups="pdk" />
   <project path="frameworks/opt/vcard" name="platform/frameworks/opt/vcard" />
   <project path="frameworks/rs" name="platform/frameworks/rs" groups="pdk" />
   <project path="frameworks/support" name="platform/frameworks/support" />
@@ -274,6 +280,9 @@
   <project path="hardware/broadcom/libbt" name="platform/hardware/broadcom/libbt" groups="pdk" />
   <project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan" groups="broadcom_wlan" />
   <project path="hardware/invensense" name="platform/hardware/invensense" groups="invensense" />
+  <project path="hardware/libhardware" name="platform/hardware/libhardware" groups="pdk" />
+  <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy" groups="pdk" />
+  <project path="hardware/qcom/audio" name="platform/hardware/qcom/audio" groups="qcom" />
   <project path="hardware/qcom/bt" name="platform/hardware/qcom/bt" groups="qcom" />
   <project path="hardware/qcom/camera" name="platform/hardware/qcom/camera" groups="qcom" />
   <project path="hardware/qcom/display" name="platform/hardware/qcom/display" groups="qcom" />
@@ -329,6 +338,7 @@
   <project path="packages/apps/QuickSearchBox" name="platform/packages/apps/QuickSearchBox" />
   <project path="packages/apps/Settings" name="platform/packages/apps/Settings" />
   <project path="packages/apps/SmartCardService" name="platform/packages/apps/SmartCardService" />
+  <project path="packages/apps/SoundRecorder" name="platform/packages/apps/SoundRecorder" />
   <project path="packages/apps/SpareParts" name="platform/packages/apps/SpareParts" />
   <project path="packages/apps/SpeechRecorder" name="platform/packages/apps/SpeechRecorder" />
   <project path="packages/apps/Stk" name="platform/packages/apps/Stk" />
@@ -359,6 +369,7 @@
   <project path="packages/wallpapers/MagicSmoke" name="platform/packages/wallpapers/MagicSmoke" />
   <project path="packages/wallpapers/MusicVisualization" name="platform/packages/wallpapers/MusicVisualization" />
   <project path="packages/wallpapers/NoiseField" name="platform/packages/wallpapers/NoiseField" />
+  <project path="packages/wallpapers/PhaseBeam" name="platform/packages/wallpapers/PhaseBeam" />
   <project path="pdk" name="platform/pdk" groups="pdk" />
   <project path="prebuilts/clang/darwin-x86/3.1" name="platform/prebuilts/clang/darwin-x86/3.1" groups="pdk,darwin" />
   <project path="prebuilts/clang/darwin-x86/3.2" name="platform/prebuilts/clang/darwin-x86/3.2" groups="pdk,darwin" />
@@ -408,6 +419,8 @@
   <project path="prebuilts/sdk" name="platform/prebuilts/sdk" groups="pdk" />
   <project path="prebuilts/tools" name="platform/prebuilts/tools" groups="pdk,tools" />
   <project path="sdk" name="platform/sdk" />
+  <project path="system/core" name="platform/system/core" groups="pdk" />
+  <project path="system/extras" name="platform/system/extras" groups="pdk" />
   <project path="system/media" name="platform/system/media" groups="pdk" />
   <project path="system/netd" name="platform/system/netd" groups="pdk" />
   <project path="system/security" name="platform/system/security" groups="pdk" />
@@ -423,75 +436,5 @@
   <project path="tools/motodev" name="platform/tools/motodev" groups="notdefault,motodev" />
   <project path="tools/studio/cloud" name="platform/tools/studio/cloud" groups="notdefault,tools" />
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
-
-  <!--DU repos-->
-
-  <!--Devices-->
-  <project path="device/samsung/celox-common" name="device_samsung_celox-common" remote="du" revision="du44" />
-  <project path="device/samsung/skyrocket" name="device_samsung_skyrocket" remote="du" revision="du44" />
-  <project path="device/samsung/msm8660-common" name="device_samsung_msm8660-common" remote="du" revision="du44" />
-  <project path="device/samsung/qcom-common" name="device_samsung_qcom-common" remote="du" revision="du44" />
-  <project path="device/samsung/t769" name="android_device_samsung_t769" remote="du" revision="du44" />
-  <project path="device/samsung/exhilarate" name="android_device_samsung_exhilarate" remote="du" revision="du44" />
-  <project path="device/htc/m7-common" name="device_htc_m7-common" remote="du" revision="du44" />
-  <project path="device/htc/m7tmo" name="device_htc_m7tmo" remote="du" revision="du44" />
-  <project path="device/samsung/l900" name="android_device_samsung_l900" remote="du" revision="du44" />
-  <project path="device/samsung/i605" name="android_device_samsung_i605" remote="du" revision="du44" />
-  <project path="device/samsung/t0lte" name="android_device_samsung_t0lte" remote="du" revision="du44" />
-  <project path="device/samsung/smdk4412-qcom-common" name="android_device_samsung_smdk4412-qcom-common" remote="du" revision="du44" />
-  <project path="device/samsung/smdk4412-common" name="android_device_samsung_smdk4412-common" remote="du" revision="du44" />
-  
-
-  <!--frameworks-->
-  <project path="frameworks/base" name="frameworks_base" remote="du" revision="du44" />
-  <project path="frameworks/av" name="frameworks_av" remote="du" revision="du44" groups="pdk" />
-  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" remote="du" revision="du44" groups="pdk" />
-  <project path="frameworks/native" name="frameworks_native" remote="du" revision="du44" groups="pdk" />
-
-  <!--hardware-->
-  <project path="hardware/libhardware" name="hardware_libhardware" remote="du" revision="du44" groups="pdk" />
-  <project path="hardware/libhardware_legacy" name="hardware_libhardware_legacy" remote="du" revision="du44" groups="pdk" />
-  <project path="hardware/qcom/display-caf" name="hardware_qcom_display-caf" remote="du" revision="du44" />
-  <project path="hardware/qcom/audio-caf" name="hardware_qcom_audio-caf" remote="du" revision="du44" />
-  <project path="hardware/qcom/audio" name="hardware_qcom_audio" remote="du" revision="du44" />
-  <project path="hardware/samsung" name="android_hardware_samsung" remote="du" revision="du44" />
-    
-
-  <!--Misc-->
-  <project path="build" name="build" remote="du" revision="du44" >
-    <copyfile src="core/root.mk" dest="Makefile" />
-  </project>
-  <project path="manifest" name="manifest" remote="du" revision="du44" />
-  <project path="system/extras" name="system_extras" remote="du" revision="du44" groups="pdk" />
-  <project path="system/core" name="system_core" remote="du" revision="du44" groups="pdk" />
-  <project path="system/qcom" name="android_system_qcom" remote="du" revision="du44" groups="pdk" />
-  <project path="external/koush/Superuser" name="external_koush_Superuser" remote="du" revision="du44" />
-  <project path="external/koush/Widgets" name="external_koush_Widgets" remote="du" revision="du44" />
-
-  <!--Packages-->
-  <project path="packages/apps/About" name="packages_apps_About" remote="du" revision="du44" />
-  <project path="packages/apps/Apollo" name="packages_apps_Apollo" remote="du" revision="du44" />
-  <project path="packages/apps/DashClock" name="packages_apps_DashClock" remote="du" revision="du44" />
-  <project path="packages/apps/DU-Changelog" name="packages_apps_DU-Changelog" remote="du" revision="du44" />
-  <project path="packages/apps/DU-Stats" name="packages_apps_DU-Stats" remote="du" revision="du44" />
-  <project path="packages/apps/DU-Updater" name="packages_apps_DU-Updater" remote="du" revision="du44" />
-  <project path="packages/apps/DU-Walls" name="packages_apps_DU-Walls" remote="du" revision="du44" />
-  <project path="packages/apps/EVWidgets" name="packages_apps_EVWidgets" remote="du" revision="du44" />
-  <project path="packages/apps/HostsFileManager" name="packages_apps_HostsFileManager" remote="du" revision="du44" />
-  <project path="packages/apps/LockClock" name="packages_apps_LockClock" remote="du" revision="du44" />
-  <project path="packages/apps/PerformanceControl" name="packages_apps_PerformanceControl" remote="du" revision="du44" />
-  <project path="packages/apps/SoundRecorder" name="packages_apps_SoundRecorder" remote="du" revision="du44" />
-  <project path="packages/apps/Torch" name="packages_apps_Torch" remote="du" revision="du44" />
-  <project path="packages/wallpapers/PhaseBeam" name="packages_wallpapers_PhaseBeam" remote="du" revision="du44" />
-
-  <!--Vendors-->
-  <project path="vendor/htc" name="vendor_htc" remote="du" revision="du44" />
-  <project path="vendor/samsung" name="proprietary_vendor_samsung" remote="du" revision="du44" />
-  <project path="vendor/du" name="vendor_du" remote="du" revision="du44" />
-
-  <!--Kernels-->
-  <project path="kernel/htc/m7" name="kernel_htc_m7" remote="du" revision="du44" /> 
-  <project path="kernel/samsung/msm8660-common" name="android_kernel_samsung_msm8660-common" remote="du" revision="du44" /> 
-  <project path="kernel/samsung/smdk4412" name="android_kernel_samsung_smdk4412" remote="du" revision="du44" /> 
 
 </manifest>
