@@ -17,7 +17,7 @@
            sync-j="8" />
 
   
-  </project>
+    <!--AOSP repos-->
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
   <project path="art" name="platform/art" />
   <project path="bootable/bootloader/legacy" name="platform/bootable/bootloader/legacy" />
