@@ -16,12 +16,10 @@
            sync-f="true"
            sync-j="8" />
 
-  <project path="build" name="platform/build" groups="pdk" >
-    <copyfile src="core/root.mk" dest="Makefile" />
+  
   </project>
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
   <project path="art" name="platform/art" />
-  <project path="bionic" name="platform/bionic" groups="pdk" />
   <project path="bootable/bootloader/legacy" name="platform/bootable/bootloader/legacy" />
   <project path="bootable/diskinstaller" name="platform/bootable/diskinstaller" />
   <project path="bootable/recovery" name="platform/bootable/recovery" groups="pdk" />
@@ -35,7 +33,6 @@
   <project path="device/asus/deb" name="device/asus/deb" groups="device,flo" />
   <project path="device/asus/flo" name="device/asus/flo" groups="device,flo" />
   <project path="device/asus/flo-kernel" name="device/asus/flo-kernel" groups="device,flo" />
-  <project path="device/asus/grouper" name="device/asus/grouper" groups="device,grouper" />
   <project path="device/asus/tilapia" name="device/asus/tilapia" groups="device,grouper" />
   <project path="device/common" name="device/common" />
   <project path="device/generic/armv7-a-neon" name="device/generic/armv7-a-neon" groups="pdk" />
@@ -247,8 +244,6 @@
   <project path="external/yaffs2" name="platform/external/yaffs2" groups="pdk" />
   <project path="external/zlib" name="platform/external/zlib" groups="pdk" />
   <project path="external/zxing" name="platform/external/zxing" />
-  <project path="frameworks/av" name="platform/frameworks/av" groups="pdk" />
-  <project path="frameworks/base" name="platform/frameworks/base" />
   <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" />
   <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" />
   <project path="frameworks/compile/slang" name="platform/frameworks/compile/slang" groups="pdk" />
@@ -267,7 +262,6 @@
   <project path="frameworks/opt/net/voip" name="platform/frameworks/opt/net/voip" />
   <project path="frameworks/opt/photoviewer" name="platform/frameworks/opt/photoviewer" />
   <project path="frameworks/opt/timezonepicker" name="platform/frameworks/opt/timezonepicker" />
-  <project path="frameworks/opt/telephony" name="platform/frameworks/opt/telephony" groups="pdk" />
   <project path="frameworks/opt/vcard" name="platform/frameworks/opt/vcard" />
   <project path="frameworks/rs" name="platform/frameworks/rs" groups="pdk" />
   <project path="frameworks/support" name="platform/frameworks/support" />
@@ -419,8 +413,6 @@
   <project path="prebuilts/sdk" name="platform/prebuilts/sdk" groups="pdk" />
   <project path="prebuilts/tools" name="platform/prebuilts/tools" groups="pdk,tools" />
   <project path="sdk" name="platform/sdk" />
-  <project path="system/core" name="platform/system/core" groups="pdk" />
-  <project path="system/extras" name="platform/system/extras" groups="pdk" />
   <project path="system/media" name="platform/system/media" groups="pdk" />
   <project path="system/netd" name="platform/system/netd" groups="pdk" />
   <project path="system/security" name="platform/system/security" groups="pdk" />
@@ -436,5 +428,56 @@
   <project path="tools/motodev" name="platform/tools/motodev" groups="notdefault,motodev" />
   <project path="tools/studio/cloud" name="platform/tools/studio/cloud" groups="notdefault,tools" />
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
+
+   <!--DU repos-->
+
+   <project path="build" name="build" remote="du" revision="du44" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+  </project>
+  <project path="manifest" name="manifest" remote="du" revision="du44" />
+  <project path="system/extras" name="system_extras" remote="du" revision="du44" groups="pdk" />
+  <project path="system/core" name="system_core" remote="du" revision="du44" groups="pdk" />
+  <project path="bionic" name="android_bionic" remote="du" revision="du44" groups="pdk" />
+
+   <!--frameworks-->
+  <project path="frameworks/base" name="frameworks_base" remote="du" revision="du44" />
+  <project path="frameworks/av" name="frameworks_av" remote="du" revision="du44" groups="pdk" />
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" remote="du" revision="du44" groups="pdk" />
+  
+   <!--Devices-->
+<project path="device/samsung/celox-common" name="device_samsung_celox-common" remote="du" revision="du44" />
+  <project path="device/samsung/skyrocket" name="device_samsung_skyrocket" remote="du" revision="du44" />
+  <project path="device/samsung/msm8660-common" name="device_samsung_msm8660-common" remote="du" revision="du44" />
+  <project path="device/samsung/qcom-common" name="device_samsung_qcom-common" remote="du" revision="du44" />
+  <project path="device/samsung/t769" name="android_device_samsung_t769" remote="du" revision="du44" />
+  <project path="device/samsung/exhilarate" name="android_device_samsung_exhilarate" remote="du" revision="du44" />
+  <project path="device/htc/m7-common" name="device_htc_m7-common" remote="du" revision="du44" />
+  <project path="device/htc/m7tmo" name="device_htc_m7tmo" remote="du" revision="du44" />
+  <project path="device/samsung/l900" name="android_device_samsung_l900" remote="du" revision="du44" />
+  <project path="device/samsung/i605" name="android_device_samsung_i605" remote="du" revision="du44" />
+  <project path="device/samsung/t0lte" name="android_device_samsung_t0lte" remote="du" revision="du44" />
+  <project path="device/samsung/smdk4412-qcom-common" name="android_device_samsung_smdk4412-qcom-common" remote="du" revision="du44" />
+  <project path="device/samsung/smdk4412-common" name="android_device_samsung_smdk4412-common" remote="du" revision="du44" />
+  <project path="device/asus/grouper" name="android_device_asus_grouper" remote="du" revision="du44" />
+
+
+  <!--Vendors-->
+  <project path="vendor/htc" name="vendor_htc" remote="du" revision="du44" />
+  <project path="vendor/samsung" name="proprietary_vendor_samsung" remote="du" revision="du44" />
+  <project path="vendor/asus" name="proprietary_vendor_asus" remote="du" revision="du44" />
+  <project path="vendor/broadcom" name="proprietary_vendor_broadcom" remote="du" revision="du44" />
+  <project path="vendor/nxp" name="proprietary_vendor_nxp" remote="du" revision="du44" />
+  <project path="vendor/imgtec" name="proprietary_vendor_imgtec" remote="du" revision="du44" />
+  <project path="vendor/elan" name="proprietary_vendor_elan" remote="du" revision="du44" />
+  <project path="vendor/invensense" name="proprietary_vendor_invensense" remote="du" revision="du44" />
+  <project path="vendor/nvidia" name="proprietary_vendor_nvidia" remote="du" revision="du44" />
+  <project path="vendor/widevine" name="proprietary_vendor_widevine" remote="du" revision="du44" />
+
+    <!--Kernels-->
+  <project path="kernel/htc/m7" name="kernel_htc_m7" remote="du" revision="du44" /> 
+  <project path="kernel/samsung/msm8660-common" name="android_kernel_samsung_msm8660-common" remote="du" revision="du44" /> 
+  <project path="kernel/samsung/smdk4412" name="android_kernel_samsung_smdk4412" remote="du" revision="du44" /> 
+  <project path="kernel/asus/grouper" name="android_kernel_asus_grouper" remote="du" revision="du44" /> 
+
 
 </manifest>
