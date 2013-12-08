@@ -438,6 +438,7 @@
   <project path="system/extras" name="system_extras" remote="du" revision="du44" groups="pdk" />
   <project path="system/core" name="system_core" remote="du" revision="du44" groups="pdk" />
   <project path="bionic" name="android_bionic" remote="du" revision="du44" groups="pdk" />
+  <project path="hardware/samsung" name="hardware_samsung" remote="du" revision="du44" groups="pdk" />
 
    <!--frameworks-->
   <project path="frameworks/base" name="frameworks_base" remote="du" revision="du44" />
