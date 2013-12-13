@@ -272,22 +272,12 @@
   <project path="frameworks/wilhelm" name="platform/frameworks/wilhelm" />
   <project path="hardware/akm" name="platform/hardware/akm" />
   <project path="hardware/broadcom/libbt" name="platform/hardware/broadcom/libbt" groups="pdk" />
-  <project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan" groups="broadcom_wlan" />
   <project path="hardware/invensense" name="platform/hardware/invensense" groups="invensense" />
-  <project path="hardware/libhardware" name="platform/hardware/libhardware" groups="pdk" />
-  <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy" groups="pdk" />
-  <project path="hardware/qcom/audio" name="platform/hardware/qcom/audio" groups="qcom" />
   <project path="hardware/qcom/bt" name="platform/hardware/qcom/bt" groups="qcom" />
-  <project path="hardware/qcom/camera" name="platform/hardware/qcom/camera" groups="qcom" />
-  <project path="hardware/qcom/display" name="platform/hardware/qcom/display" groups="qcom" />
   <project path="hardware/qcom/keymaster" name="platform/hardware/qcom/keymaster" groups="qcom" />
-  <project path="hardware/qcom/media" name="platform/hardware/qcom/media" groups="qcom" />
   <project path="hardware/qcom/msm8960" name="platform/hardware/qcom/msm8960" groups="qcom_msm8960" />
-  <project path="hardware/qcom/msm8x74" name="platform/hardware/qcom/msm8x74" groups="qcom_msm8x74" />
-  <project path="hardware/qcom/power" name="platform/hardware/qcom/power" groups="qcom" />
   <project path="hardware/qcom/sensors" name="platform/hardware/qcom/sensors" groups="qcom" />
   <project path="hardware/qcom/wlan" name="platform/hardware/qcom/wlan" groups="qcom_wlan" />
-  <project path="hardware/ril" name="platform/hardware/ril" groups="pdk" />
   <project path="hardware/samsung_slsi/exynos5" name="platform/hardware/samsung_slsi/exynos5" groups="exynos5" />
   <project path="hardware/ti/omap3" name="platform/hardware/ti/omap3" />
   <project path="hardware/ti/omap4xxx" name="platform/hardware/ti/omap4xxx" groups="omap4" />
@@ -437,8 +427,23 @@
   <project path="manifest" name="manifest" remote="du" revision="du44" />
   <project path="system/extras" name="system_extras" remote="du" revision="du44" groups="pdk" />
   <project path="system/core" name="system_core" remote="du" revision="du44" groups="pdk" />
+  <project path="system/qcom" name="android_system_qcom" remote="du" revision="du44" groups="pdk" />
   <project path="bionic" name="android_bionic" remote="du" revision="du44" groups="pdk" />
   <project path="hardware/samsung" name="hardware_samsung" remote="du" revision="du44" groups="pdk" />
+
+   <!--hardware-->
+   <project path="hardware/qcom/camera" name="android_hardware_qcom_camera" remote="du" revision="du44" groups="pdk" />
+   <project path="hardware/qcom/audio" name="android_hardware_qcom_audio" remote="du" revision="du44" groups="pdk" />
+   <project path="hardware/qcom/audio-caf" name="android_hardware_qcom_audio-caf" remote="du" revision="du44" groups="pdk" />
+   <project path="hardware/qcom/display" name="android_hardware_qcom_display" remote="du" revision="du44" groups="pdk" />
+   <project path="hardware/qcom/media" name="android_hardware_qcom_media" remote="du" revision="du44" groups="pdk" />
+   <project path="hardware/qcom/media-vl2" name="android_hardware_qcom_media-vl2" remote="du" revision="du44" groups="pdk" />
+   <project path="hardware/qcom/msm8x74" name="android_hardware_qcom_msm8x74" remote="du" revision="du44" groups="pdk" />
+   <project path="hardware/qcom/power" name="android_hardware_qcom_power" remote="du" revision="du44" groups="pdk" />
+   <project path="hardware/ril" name="android_hardware_ril" remote="du" revision="du44" groups="pdk" />
+   <project path="hardware/broadcom/wlan" name="android_hardware_broadcom_wlan" remote="du" revision="du44" groups="pdk" />
+   <project path="hardware/libhardware" name="android_hardware_libhardware" remote="du" revision="du44" groups="pdk" />
+   <project path="hardware/libhardware_legacy" name="android_hardware_libhardware_legacy" remote="du" revision="du44" groups="pdk" />
 
    <!--frameworks-->
   <project path="frameworks/base" name="frameworks_base" remote="du" revision="du44" />
